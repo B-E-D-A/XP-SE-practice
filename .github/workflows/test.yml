@@ -1,0 +1,27 @@
+name: Run Java App tests
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Java JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '19'
+          distribution: 'temurin'
+
+      - name: Build project
+        run: ./gradlew build
+        
+      - name: Run tests
+        run: ./gradlew test --tests "tests.test"
