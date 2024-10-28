@@ -2,14 +2,14 @@ import org.junit.jupiter.api.Test;
 
 public class Tests {
 
-//    @Test
-//    void createDeadline(){
+    @Test
+    void createDeadline(){
 //        Deadline deadline = new Deadline("Тестовый дедлайн", LocalDateTime.now().plusMinutes(5));
 //        assertFalse(deadline.isApproaching(10)); // Не должен приближаться через 10 минут
 //
 //        deadline = new Deadline("Тест", LocalDateTime.now().plusMinutes(5));
 //        assertTrue(deadline.isApproaching(6));
-//    }
+    }
 //
 //    private TaskManager taskManager;
 //
