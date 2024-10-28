@@ -9,6 +9,13 @@ public class Deadline {
     private String time;
     private String isFinished;
 
+    public Deadline(String name, String date, String time, String isFinished) {
+        this.name = name;
+        this.date = date;
+        this.time = time;
+        this.isFinished = isFinished;
+    }
+
     public UUID getId() {
         return id;
     }

@@ -1,39 +1,25 @@
+import org.app.utils.Deadline;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class Tests {
 
     @Test
     void createDeadline(){
-//        Deadline deadline = new Deadline("Тестовый дедлайн", LocalDateTime.now().plusMinutes(5));
-//        assertFalse(deadline.isApproaching(10)); // Не должен приближаться через 10 минут
-//
-//        deadline = new Deadline("Тест", LocalDateTime.now().plusMinutes(5));
-//        assertTrue(deadline.isApproaching(6));
+        Deadline deadline = new Deadline("Задача 1", "2023-10-28", "14:00", "Нет");
+
+        assertNotNull(deadline.getId());
+        assertEquals("Задача 1", deadline.getName());
+        assertEquals("2023-10-01", deadline.getDate());
+        assertEquals("12:00", deadline.getTime());
+        assertEquals("Нет", deadline.getIsFinished());
     }
-//
-//    private TaskManager taskManager;
-//
-//    @BeforeEach
-//    void setUp() {
-//        taskManager = new TaskManager();
-//    }
-//
-//    @Test
-//    void testAddDeadline() {
-//        Deadline deadline = new Deadline("Тест", LocalDateTime.now().plusDays(1));
-//        taskManager.addDeadline(deadline);
-//        assertEquals(1, taskManager.getDeadlines().size());
-//        assertEquals("Тест", taskManager.getDeadlines().get(0).getTitle());
-//    }
-//
-//    @Test
-//    void testNotifyUser() {
-//        NotificationService notificationService = new NotificationService();
-//        Deadline deadline = mock(Deadline.class);
-//        when(deadline.getTitle()).thenReturn("Тест");
-//
-//        // Печать уведомления
-//        notificationService.notifyUser(deadline);
-//    }
+
+    @Test
+    void addDeadline(){
+
+    }
 
 }
