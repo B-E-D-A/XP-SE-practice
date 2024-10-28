@@ -4,16 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.app.utils.AppSystem;
 
-import java.awt.desktop.AppHiddenListener;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 
 
 public class Main extends Application {
@@ -33,7 +27,7 @@ public class Main extends Application {
 //        } catch (Exception e) {
 //            logger.error("Error loading icon: " + e.getMessage());
 //        }
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 600, 450);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.centerOnScreen();

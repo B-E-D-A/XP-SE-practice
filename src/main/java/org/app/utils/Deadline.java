@@ -9,11 +9,15 @@ public class Deadline {
     private String time;
     private String isFinished;
 
-    public Deadline(String name, String date, String time, String isFinished) {
-        this.name = name;
-        this.date = date;
-        this.time = time;
-        this.isFinished = isFinished;
+    public Deadline(String text, String text1, String text2, String aFalse) {
+        this.date = text1;
+        this.name = text;
+        this.time = text2;
+        this.isFinished = aFalse;
+    }
+
+    public Deadline() {
+
     }
 
     public UUID getId() {
@@ -51,5 +55,8 @@ public class Deadline {
     public void setIsFinished(String isFinished) {
         this.isFinished = isFinished;
     }
-}
 
+    public void setId(UUID id) {
+        this.id = id;
+    }
+}

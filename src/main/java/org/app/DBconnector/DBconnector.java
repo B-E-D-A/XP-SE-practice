@@ -25,7 +25,7 @@ public class DBconnector {
             logger.info("Connection to SQLite has been established.");
 
             String sql = "CREATE TABLE IF NOT EXISTS deadlines ("
-                    + "id INTEGER,"
+                    + "id TEXT NOT NULL,"
                     + "dl_text TEXT NOT NULL,"
                     + "dl_date TEXT NOT NULL,"
                     + "dl_time TEXT NOT NULL,"

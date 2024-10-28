@@ -11,6 +11,7 @@
             <Button fx:id="backButton" text="Назад" onAction="#turnToPreviousMonth"/>
             <Label fx:id="monthName"/>
             <Button fx:id="nextButton" text="Вперед" onAction="#turnToNextMonth"/>
+            <Button fx:id="addDeadline" text="+" onAction="#addDeadline"/>
         </HBox>
       <GridPane alignment="CENTER" fx:id="CalendarGrid">
         <columnConstraints>
